@@ -1,3 +1,5 @@
+import 'package:animated_screen_transition/core/page_transitions.dart';
+import 'package:animated_screen_transition/second_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeViwe extends StatelessWidget {
@@ -15,28 +17,53 @@ class HomeViwe extends StatelessWidget {
           children: [
             CustomButton(
               text: "Scale Transition",
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    PageTransitions(
+                      screen: const SecondScreen(),
+                      transitionType: TransitionType.scale,
+                    ));
+              },
             ),
             const SizedBox(
               height: 20,
             ),
             CustomButton(
               text: "Slide Transition",
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    PageTransitions(
+                      screen: const SecondScreen(),
+                      transitionType: TransitionType.slide,
+                    ));
+              },
             ),
             const SizedBox(
               height: 20,
             ),
             CustomButton(
               text: "Rotation Transition",
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    PageTransitions(
+                      screen: const SecondScreen(),
+                      transitionType: TransitionType.rotation,
+                    ));
+              },
             ),
             const SizedBox(
               height: 20,
             ),
             CustomButton(
               text: "Normal effect",
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) {
+                  return SecondScreen();
+                }));
+              },
             ),
           ],
         ),

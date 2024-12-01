@@ -23,7 +23,9 @@ class SecondScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16),
               ),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             child: const Text(
               "< Back",
               style: TextStyle(fontSize: 28),
